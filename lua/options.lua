@@ -62,4 +62,16 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Requires nerd font
+vim.g.have_nerd_font = true
+
+-- Use Powershell instead of cmd
+vim.o.shell = 'powershell'
+vim.o.shellcmdflag =
+  '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
+vim.o.shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+vim.o.shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+vim.o.shellquote = ''
+vim.o.shellxquote = ''
+
 -- vim: ts=2 sts=2 sw=2 et
