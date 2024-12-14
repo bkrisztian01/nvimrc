@@ -6,6 +6,8 @@ end
 return {
   'nanotee/zoxide.vim',
   config = function()
-    vim.api.nvim_create_user_command('Zh', navigate_to_current_file, {})
+    vim.api.nvim_create_user_command('Zh', navigate_to_current_file, {
+      desc = 'Navigate to the directory of the current file',
+    })
   end,
 }
