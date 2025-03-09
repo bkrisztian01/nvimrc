@@ -31,6 +31,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('n', 'oo', 'o<Esc>k', { desc = 'Create a new line without going into insert mode' })
+vim.keymap.set('n', 'OO', 'O<Esc>j', { desc = 'Create a new line above without going into insert mode' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
